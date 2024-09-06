@@ -1,0 +1,96 @@
+            <i class="ri-wallet-3-fill"></i>
+            <i class="ri-eye-line"></i>
+            <i class="ri-eye-off-line"></i>
+            <i class="ri-arrow-up-double-line"></i>
+            <i class="ri-shopping-cart-fill"></i>
+            <i class="ri-image-2-fill"></i>
+            <i class="ri-team-fill"></i>
+            <i class="ri-home-4-fill"></i>
+            <i class="ri-facebook-circle-fill"></i>
+            <i class="ri-whatsapp-fill"></i>
+            <i class="ri-telegram-fill"></i>
+            <i class="ri-instagram-fill"></i>
+            <i class="ri-youtube-fill"></i>
+            <i class="ri-heart-fill"></i>
+            <i class="ri-delete-back-2-line"></i>
+            <i class="ri-login-circle-line"></i>
+            <i class="ri-dashboard-horizontal-line"></i>
+            <i class="ri-user-line"></i>
+            <i class="ri-money-rupee-circle-fill"></i>
+            <i class="ri-question-line"></i>
+            <i class="ri-logout-box-r-line"></i>
+            <i class="ri-add-box-line"></i>
+            <i class="ri-subtract-line"></i>
+            <i class="ri-arrow-left-s-line"></i>
+            <i class="ri-arrow-right-s-line"></i>
+            <i class="ri-mic-fill"></i>
+            <i class="ri-coins-line"></i>
+            <i class="ri-key-line"></i>
+            <i class="ri-lock-fill"></i>
+            <i class="ri-book-open-line"></i>
+            <i class="ri-git-fork-line"></i>
+            <i class="ri-chat-new-fill"></i>
+            <i class="ri-cactus-fill"></i>
+            <i class="ri-phone-fill"></i>
+            <i class="ri-magic-line"></i>
+            <i class="ri-feedback-line"></i>
+            <i class="ri-pass-valid-line"></i>
+            <i class="ri-verified-badge-line"></i>
+            <i class="ri-global-line"></i>
+            <i class="ri-service-fill"></i>
+            <i class="ri-add-fill"></i>
+
+
+
+
+            .menu {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid rgba(211, 186, 186, 0.3);
+            }
+        
+            .menu-item {
+                margin: 10px 0;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+                border-bottom: 1px solid rgba(211, 186, 186, 0.3);
+            }
+            .menu-item a {
+                text-decoration: none;
+                color: white;
+                font-weight: 200;
+            }
+            .menu-item h4 {
+                font-size: 4.5vw;
+                font-weight: 100;
+            }
+        
+            .submenu {
+                display: none;
+                /* margin-left: 20px; */
+                background-image: linear-gradient(to left, rgb(98, 224, 98),rgb(224, 159, 61));
+                
+                border: 1px solid rgba(211, 186, 186, 0.3);
+            }
+            .submenu a {
+                color: #db18e2;
+                display: block;
+                text-decoration: none;
+                margin: 5px 0;
+                padding: 0px 30px;
+                font-size: 4.5vw;
+        
+            }
+            .icon {
+                font-size: 5vw;
+                margin-left: 10px;
+            }
+            .open .submenu {
+                display: block;
+            }
+            .open .icon {
+                content: '-';
+            }
