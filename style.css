@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: "Poppins" ,"Roboto" , sans-serif;
     font-weight: 300;
     /* font-family: 'Calibri'; */
@@ -18,7 +19,8 @@ main {
     width: 100%;
     /* position: relative ; */
     background-image: url(assets/footer.png);
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     /* background-repeat: no-repeat; */
     background-size: cover;
 }
@@ -33,10 +35,18 @@ nav {
 #navbar {
     height: 9.5vh;
     width: 100%;
+    background-image: -o-linear-gradient(left, rgb(20, 20, 233), rgb(112, 90, 173));
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(20, 20, 233)), to(rgb(112, 90, 173)));
     background-image: linear-gradient(to right, rgb(20, 20, 233), rgb(112, 90, 173));
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: fixed;
     top: 0;
     padding-right: 20px;
@@ -46,7 +56,8 @@ nav {
     margin-left: 20px;
     height: 7.5vh;
     width: auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 #navbar #logo a {
     text-decoration: none;
@@ -54,8 +65,12 @@ nav {
 
 #navbar #greet {
     color: aliceblue;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 20px;
     gap: 15px;
 }
@@ -65,16 +80,26 @@ nav {
 
 #home-div {
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 20px;
 }
 nav #home-div .drop-down:hover {
     color: aqua;
     scale: 1.1;
     border-bottom: 2px solid rgb(211, 194, 194);
+    background-image: -o-linear-gradient(bottom, rgb(235, 15, 169), rgb(73, 4, 233));
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(235, 15, 169)), to(rgb(73, 4, 233)));
     background-image: linear-gradient(to top, rgb(235, 15, 169), rgb(73, 4, 233));
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .drop-down a {
@@ -94,6 +119,8 @@ nav #home-div .drop-down:hover {
     top: 6.5vh;
     z-index: 3;
     display: none;
+    background-image: -o-linear-gradient(right, rgb(98, 224, 98),rgb(224, 159, 61));
+    background-image: -webkit-gradient(linear, right top, left top, from(rgb(98, 224, 98)),to(rgb(224, 159, 61)));
     background-image: linear-gradient(to left, rgb(98, 224, 98),rgb(224, 159, 61));
 }
 .sub-drop-down a {
@@ -109,13 +136,19 @@ nav #home-div .drop-down:hover {
     display: block;
 }
 .open .drop-down-arrow {
-    content: "&#11165";
+    content: "⮝";
 }
 
 #navbar #user {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 5px;
 }
 #user #adm {
@@ -126,12 +159,26 @@ nav #home-div .drop-down:hover {
     scale: 1.5;
 }
 .anim {
-    animation: blink 1s infinite;
+    -webkit-animation: blink 1s infinite;
+            animation: blink 1s infinite;
     height: 4.5vh;
     cursor: pointer;
 }
 .anim:hover {
     scale: 1.5;
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 @keyframes blink {
     0% {
@@ -166,9 +213,16 @@ nav #home-div .drop-down:hover {
     /* z-index: 99; */
 }
 #notification-heading-cross {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-image: -o-linear-gradient(45deg, rgb(86, 84, 192),  rgb(121, 212, 208) );
     background-image: linear-gradient(45deg, rgb(86, 84, 192),  rgb(121, 212, 208) );
     border-top-left-radius: 20px;
     /* border-top-right-radius: 20px; */
@@ -191,15 +245,22 @@ nav #home-div .drop-down:hover {
     
 }
 #my-notifications {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 10px 70px 40px 20px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 #my-notifications p {
     padding: 5px 0px;
     font-size: 1vw;
     color: #121494;
     cursor: pointer;
+    -webkit-transition: scale 0.3s ease;
+    -o-transition: scale 0.3s ease;
     transition: scale 0.3s ease;
 }
 #my-notifications p:hover {
@@ -219,10 +280,18 @@ nav #home-div .drop-down:hover {
     display: none;
 }
 .box #cross-button-profile {
+    background-image: -o-linear-gradient(left, rgb(16, 233, 233), rgb(7, 255, 48));
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(16, 233, 233)), to(rgb(7, 255, 48)));
     background-image: linear-gradient(to right, rgb(16, 233, 233), rgb(7, 255, 48));
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 .box #cross-button-profile i {
     cursor: pointer;
@@ -230,15 +299,27 @@ nav #home-div .drop-down:hover {
 }
 .box #upper {
     height: 170px;
+    background-image: -o-linear-gradient(left, rgb(16, 233, 233), rgb(7, 255, 48));
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(16, 233, 233)), to(rgb(7, 255, 48)));
     background-image: linear-gradient(to right, rgb(16, 233, 233), rgb(7, 255, 48));
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #upper img {
     height: 10.5vh;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 #upper h2,
 #upper h4 {
@@ -253,9 +334,14 @@ nav #home-div .drop-down:hover {
 .box #lower {
     height: 35px;
     background-color: antiquewhite;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 .btn {
     padding: 4px 20px 4px 20px;
@@ -283,15 +369,27 @@ nav #home-div .drop-down:hover {
 #personal #date-time {
     margin-top: 9.5vh;
     padding: 5px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 #welcome {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #welcome h2 {
     font-size: 2.5vw;
@@ -304,11 +402,19 @@ nav #home-div .drop-down:hover {
 #personal-info {
     border: 2px solid black;
     padding: 5px 20px;
+    background-image: -o-linear-gradient(right, rgb(235, 15, 169), rgb(73, 4, 233));
+    background-image: -webkit-gradient(linear, right top, left top, from(rgb(235, 15, 169)), to(rgb(73, 4, 233)));
     background-image: linear-gradient(to left, rgb(235, 15, 169), rgb(73, 4, 233));
     border-radius: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 #personal-info h2 {
     font-weight: 300;
@@ -325,9 +431,15 @@ nav #home-div .drop-down:hover {
 
 #personal-details {
     padding: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin-top: 10px;
 }
 #personal-details #left {
@@ -349,14 +461,22 @@ nav #home-div .drop-down:hover {
     font-weight: 100;
 }
 #personal-details #left #left-part2 #rank, #joining {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 #personal-details #left #left-part2 #rank #rank-btn {
     border-radius: 20px;
     font-size: 15px;
     padding: 5px 20px;
+    background-image: -o-linear-gradient(right bottom,rgb(207, 106, 38), rgb(230, 230, 120));
+    background-image: -webkit-gradient(linear,right bottom, left top,from(rgb(207, 106, 38)), to(rgb(230, 230, 120)));
     background-image: linear-gradient(to left top,rgb(207, 106, 38), rgb(230, 230, 120));
 }
 #personal-details #right {
@@ -369,19 +489,32 @@ nav #home-div .drop-down:hover {
     margin-top: 50px;
     padding: 20px;
     border-radius: 40px;
-    object-fit: cover;
-    object-position: top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
 }
 
 #personal #sponser {
     margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #personal #sponser h3 {
     font-size: 1.5vw;
+    background-image: -o-linear-gradient(right, rgb(235, 15, 169), rgb(73, 4, 233));
+    background-image: -webkit-gradient(linear, right top, left top, from(rgb(235, 15, 169)), to(rgb(73, 4, 233)));
     background-image: linear-gradient(to left, rgb(235, 15, 169), rgb(73, 4, 233));
     border-radius: 25px;
     padding: 0px 15px;
@@ -390,6 +523,8 @@ nav #home-div .drop-down:hover {
 #personal #sponser h1 {
     font-size: 4vw;
     font-weight: 400;
+    background-image: -o-linear-gradient(left, rgb(249, 253, 6), rgb(185, 171, 107), white);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(249, 253, 6)), color-stop(rgb(185, 171, 107)), to(white));
     background-image: linear-gradient(to right, rgb(249, 253, 6), rgb(185, 171, 107), white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
@@ -397,15 +532,25 @@ nav #home-div .drop-down:hover {
 
 #ruscon-id , #ruscon-contact {
     padding: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 2vw;
 }
 .ruscon-id ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 15px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
     font-size: 2vw;
 }
@@ -427,9 +572,15 @@ nav #home-div .drop-down:hover {
     overflow: scroll;
 }
 #image-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     /* overflow-x: scroll;
     overflow-y: hidden; */
 }
@@ -439,45 +590,101 @@ nav #home-div .drop-down:hover {
 #image-slider img {
     border-radius: 15px;
     padding: 10px 5px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }
 #image-slider{
-    animation-name: scroll;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    -webkit-animation-name: scroll;
+            animation-name: scroll;
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
 }
-@keyframes scroll {
+@-webkit-keyframes scroll {
     0%{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     20%{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     25%{
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
     }
     45%{
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
     }
     50%{
-        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+                transform: translateX(-200%);
     }
     70%{
-        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+                transform: translateX(-200%);
     }
     75%{
-        transform: translateX(-300%);
+        -webkit-transform: translateX(-300%);
+                transform: translateX(-300%);
     }
     95%{
-        transform: translateX(-300%);
+        -webkit-transform: translateX(-300%);
+                transform: translateX(-300%);
     }
     
     100%{
-        transform: translateX(-300%);
+        -webkit-transform: translateX(-300%);
+                transform: translateX(-300%);
+    }
+}
+@keyframes scroll {
+    0%{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    20%{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    25%{
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    45%{
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    50%{
+        -webkit-transform: translateX(-200%);
+                transform: translateX(-200%);
+    }
+    70%{
+        -webkit-transform: translateX(-200%);
+                transform: translateX(-200%);
+    }
+    75%{
+        -webkit-transform: translateX(-300%);
+                transform: translateX(-300%);
+    }
+    95%{
+        -webkit-transform: translateX(-300%);
+                transform: translateX(-300%);
+    }
+    
+    100%{
+        -webkit-transform: translateX(-300%);
+                transform: translateX(-300%);
     }
 }
 
@@ -494,9 +701,15 @@ nav #home-div .drop-down:hover {
 #wallet-details {
     width: 100%;
     padding: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content:space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between;
     gap: 10px;
     margin: 10px 0px;
 }
@@ -512,9 +725,15 @@ nav #home-div .drop-down:hover {
     line-height: 1.2;
 }
 #box-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2vw;
 }
 #box-icon i {
@@ -526,18 +745,30 @@ nav #home-div .drop-down:hover {
     margin: 10px 0px;
     width: 100%;
     padding: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     /* border: 4px solid red; */
     gap: 5px;
 }
 #wallet-box {
     width: 32%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 10px;
+    background-image: -o-linear-gradient(right, rgb(197, 197, 43),rgb(199, 62, 158));
+    background-image: -webkit-gradient(linear, right top, left top, from(rgb(197, 197, 43)),to(rgb(199, 62, 158)));
     background-image: linear-gradient(to left, rgb(197, 197, 43),rgb(199, 62, 158));
     padding: 15px;
     border-radius: 10px;
@@ -587,25 +818,42 @@ nav #home-div .drop-down:hover {
     margin-top: 5px;
     width: 100%;
     padding: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     gap: 5px;
 }
 #income-box {
     width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
+    background-image: -o-linear-gradient(left top, rgb(49, 199, 179), rgb(200, 202, 72));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(49, 199, 179)), to(rgb(200, 202, 72)));
     background-image: linear-gradient(to right bottom, rgb(49, 199, 179), rgb(200, 202, 72));
     padding: 5px 10px;
     border-radius: 10px;
 }
 #income-box:first-child{
+    background-image: -o-linear-gradient(left top, rgb(214, 203, 100), rgb(221, 143, 211));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(214, 203, 100)), to(rgb(221, 143, 211)));
     background-image: linear-gradient(to right bottom, rgb(214, 203, 100), rgb(221, 143, 211));
 }
 #income-box:nth-child(2) {
+    background-image: -o-linear-gradient(left top, rgb(214, 203, 100), rgb(221, 143, 211));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(214, 203, 100)), to(rgb(221, 143, 211)));
     background-image: linear-gradient(to right bottom, rgb(214, 203, 100), rgb(221, 143, 211));
 }
 #income-box h4, #income-box h1 {
@@ -615,8 +863,12 @@ nav #home-div .drop-down:hover {
     letter-spacing: 1.5;
 }
 #income-rs-eye {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     justify-items: center;
     gap: 8px;
 }
@@ -634,16 +886,29 @@ nav #home-div .drop-down:hover {
     margin: 40px 0px;
     width: 100%;
     padding: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     gap: 10px;
 }
 #rank-box {
     width: 32%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
+    background-image: -o-linear-gradient(right, rgb(197, 197, 43),rgb(199, 62, 158));
+    background-image: -webkit-gradient(linear, right top, left top, from(rgb(197, 197, 43)),to(rgb(199, 62, 158)));
     background-image: linear-gradient(to left, rgb(197, 197, 43),rgb(199, 62, 158));
     padding: 5px 10px;
     border-radius: 10px;
@@ -654,8 +919,12 @@ nav #home-div .drop-down:hover {
     font-weight: 400;
 }
 #rank-rs-eye {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     justify-items: center;
     gap: 8px;
 }
@@ -668,9 +937,13 @@ nav #home-div .drop-down:hover {
     rotate: 350deg;
 }
 #rank-box:nth-child(2) {
+    background-image: -o-linear-gradient(left top, rgb(86, 173, 199), rgb(54, 56, 204));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(86, 173, 199)), to(rgb(54, 56, 204)));
     background-image: linear-gradient(to right bottom, rgb(86, 173, 199), rgb(54, 56, 204));
 }
 #rank-box:nth-child(3) {
+    background-image: -o-linear-gradient(left top, rgb(214, 203, 100), rgb(206, 107, 62));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(214, 203, 100)), to(rgb(206, 107, 62)));
     background-image: linear-gradient(to right bottom, rgb(214, 203, 100), rgb(206, 107, 62));
 }
 
@@ -678,25 +951,42 @@ nav #home-div .drop-down:hover {
     margin-top: 5px;
     width: 100%;
     padding: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     gap: 5px;
 }
 #part-one {
     width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
+    background-image: -o-linear-gradient(left top, rgb(214, 203, 100), rgb(250, 152, 71));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(214, 203, 100)), to(rgb(250, 152, 71)));
     background-image: linear-gradient(to right bottom, rgb(214, 203, 100), rgb(250, 152, 71));
     padding: 5px 10px;
     border-radius: 10px;
 }
 #part-one:first-child{
+    background-image: -o-linear-gradient(left top, rgb(214, 203, 100), rgb(230, 163, 221));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(214, 203, 100)), to(rgb(230, 163, 221)));
     background-image: linear-gradient(to right bottom, rgb(214, 203, 100), rgb(230, 163, 221));
 }
 #part-one:nth-child(2) {
+    background-image: -o-linear-gradient(left top, rgb(214, 203, 100), rgb(221, 143, 211));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(214, 203, 100)), to(rgb(221, 143, 211)));
     background-image: linear-gradient(to right bottom, rgb(214, 203, 100), rgb(221, 143, 211));
 }
 #part-one h4, #part-one h1 {
@@ -715,25 +1005,42 @@ nav #home-div .drop-down:hover {
     margin-top: 5px;
     width: 100%;
     padding: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     gap: 5px;
 }
 #part-two {
     width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
+    background-image: -o-linear-gradient(left top, rgb(49, 199, 179), rgb(200, 202, 72));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(49, 199, 179)), to(rgb(200, 202, 72)));
     background-image: linear-gradient(to right bottom, rgb(49, 199, 179), rgb(200, 202, 72));
     padding: 5px 10px;
     border-radius: 10px;
 }
 #part-two:first-child{
+    background-image: -o-linear-gradient(left top, rgb(243, 219, 4), rgb(245, 130, 36));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(243, 219, 4)), to(rgb(245, 130, 36)));
     background-image: linear-gradient(to right bottom, rgb(243, 219, 4), rgb(245, 130, 36));
 }
 #part-two:nth-child(2) {
+    background-image: -o-linear-gradient(left top, rgb(243, 219, 4), rgb(245, 130, 36));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(243, 219, 4)), to(rgb(245, 130, 36)));
     background-image: linear-gradient(to right bottom, rgb(243, 219, 4), rgb(245, 130, 36));
 }
 #part-two h4, #part-two h1 {
@@ -752,25 +1059,42 @@ nav #home-div .drop-down:hover {
     margin-top: 5px;
     width: 100%;
     padding: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     gap: 5px;
 }
 #part-three {
     width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
+    background-image: -o-linear-gradient(left top, rgb(86, 173, 199), rgb(54, 56, 204));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(86, 173, 199)), to(rgb(54, 56, 204)));
     background-image: linear-gradient(to right bottom, rgb(86, 173, 199), rgb(54, 56, 204));
     padding: 5px 10px;
     border-radius: 10px;
 }
 #part-three:first-child{
+    background-image: -o-linear-gradient(left top, rgb(214, 203, 100), rgb(206, 107, 62));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(214, 203, 100)), to(rgb(206, 107, 62)));
     background-image: linear-gradient(to right bottom, rgb(214, 203, 100), rgb(206, 107, 62));
 }
 #part-three:nth-child(2) {
+    background-image: -o-linear-gradient(left top, rgb(214, 203, 100), rgb(206, 107, 62));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(214, 203, 100)), to(rgb(206, 107, 62)));
     background-image: linear-gradient(to right bottom, rgb(214, 203, 100), rgb(206, 107, 62));
 }
 #part-three h4, #part-three h1 {
@@ -798,11 +1122,14 @@ nav #home-div .drop-down:hover {
 
 .services-container {
     margin: 20px 10px 10px 10px;
+    background-image: -o-linear-gradient(right top,#d880e4,#ecee70);
+    background-image: -webkit-gradient(linear,right top, left bottom,from(#d880e4),to(#ecee70));
     background-image: linear-gradient(to left bottom,#d880e4,#ecee70);
     /* border: 10px; */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0 , 0 ,0.1);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0 , 0 ,0.1);
+            box-shadow: 0 0 10px rgba(0, 0 , 0 ,0.1);
 }
 .header {
     background-color: #101060;
@@ -815,12 +1142,20 @@ nav #home-div .drop-down:hover {
     margin-top: 20px;
 }
 .section-header {
+    background-image: -o-linear-gradient(left top, rgb(97, 168, 235),rgb(67, 223, 127), rgb(233, 236, 61));
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(97, 168, 235)),color-stop(rgb(67, 223, 127)), to(rgb(233, 236, 61)));
     background-image: linear-gradient(to right bottom, rgb(97, 168, 235),rgb(67, 223, 127), rgb(233, 236, 61));
     color: rgb(0, 0, 0);
     padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-weight: 700;
     font-size: 2vw;
 }
@@ -833,7 +1168,11 @@ nav #home-div .drop-down:hover {
     color: black;
     padding: 0px 5px;
     border-radius: 15px;
+    background-image: -o-linear-gradient(top, rgb(255, 249, 253), rgb(73, 4, 233));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 249, 253)), to(rgb(73, 4, 233)));
     background-image: linear-gradient(to bottom, rgb(255, 249, 253), rgb(73, 4, 233));
+    -webkit-transition: all 0.2s linear ;
+    -o-transition: all 0.2s linear ;
     transition: all 0.2s linear ;   
 }
 .services-container a {
@@ -842,8 +1181,12 @@ nav #home-div .drop-down:hover {
 .buttons {
     width: 100%;
     height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding: 5px;
 }
 .buttons button, .buttons button:empty {
@@ -867,7 +1210,11 @@ nav #home-div .drop-down:hover {
     padding: 0px 15px;
     border-radius: 15px;
     border-bottom: 3px solid rgb(5, 5, 5);
+    background-image: -o-linear-gradient(top, rgb(255, 249, 253), rgb(73, 4, 233));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 249, 253)), to(rgb(73, 4, 233)));
     background-image: linear-gradient(to bottom, rgb(255, 249, 253), rgb(73, 4, 233));
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
@@ -884,11 +1231,14 @@ nav #home-div .drop-down:hover {
 
 .team-details-container {
     margin: 0px 10px;
+    background-image: -o-linear-gradient(right,#33f71a,#67d7e6);
+    background-image: -webkit-gradient(linear,right top, left top,from(#33f71a),to(#67d7e6));
     background-image: linear-gradient(to left,#33f71a,#67d7e6);
     /* border: 10px; */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0 , 0 ,0.1);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0 , 0 ,0.1);
+            box-shadow: 0 0 10px rgba(0, 0 , 0 ,0.1);
 }
 .team-details-header {
     color: rgb(4, 1, 46);
@@ -911,13 +1261,18 @@ nav #home-div .drop-down:hover {
 .team-details-buttons {
     width: 100%;
     height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding: 5px;
     margin-bottom: 10px;
 }
 .team-details-buttons button {
     padding: 10px;
+    background-image: -o-linear-gradient(right,#f3a6e9,#ebd780);
+    background-image: -webkit-gradient(linear,right top, left top,from(#f3a6e9),to(#ebd780));
     background-image: linear-gradient(to left,#f3a6e9,#ebd780);
     border: none;
     border-radius: 10px;
@@ -939,7 +1294,11 @@ nav #home-div .drop-down:hover {
     padding: 0px 15px;
     border-radius: 35px;
     border-bottom: 3px solid rgb(5, 5, 5);
+    background-image: -o-linear-gradient(top, rgb(228, 161, 75), rgb(85, 200, 235));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(228, 161, 75)), to(rgb(85, 200, 235)));
     background-image: linear-gradient(to bottom, rgb(228, 161, 75), rgb(85, 200, 235));
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
@@ -957,12 +1316,23 @@ nav #home-div .drop-down:hover {
 #qr-code {
     width: calc(100% - 20px);
     margin: 10px 10px;
+    background-image: -o-linear-gradient(right,#33f71a,#67d7e6);
+    background-image: -webkit-gradient(linear,right top, left top,from(#33f71a),to(#67d7e6));
     background-image: linear-gradient(to left,#33f71a,#67d7e6);
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 8vw;
     font-weight: 300;
     text-align: center;
@@ -1018,6 +1388,7 @@ nav #home-div .drop-down:hover {
     color: yellow;
     font-weight: 500;
     display: block;
+    background-image: -o-linear-gradient(45deg, rgb(86, 84, 192),  rgb(121, 212, 208) );
     background-image: linear-gradient(45deg, rgb(86, 84, 192),  rgb(121, 212, 208) );
     text-align: start;
     padding: 10px 0px 10px 15px;
@@ -1034,19 +1405,34 @@ nav #home-div .drop-down:hover {
     padding-top: 20px;
     letter-spacing: 1.5px;
     cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    animation: latestNews 3s linear infinite;
+    -webkit-animation: latestNews 3s linear infinite;
+            animation: latestNews 3s linear infinite;
 }
 #latest-news #news-container h4:hover {
     font-size: 2.2vw;
     color: #16f028;
 }
-@keyframes latestNews {
+@-webkit-keyframes latestNews {
     0% {
-        transform: translateY(400%);
+        -webkit-transform: translateY(400%);
+                transform: translateY(400%);
     }
     100% {
-        transform: translateY(-30%);
+        -webkit-transform: translateY(-30%);
+                transform: translateY(-30%);
+    }
+}
+@keyframes latestNews {
+    0% {
+        -webkit-transform: translateY(400%);
+                transform: translateY(400%);
+    }
+    100% {
+        -webkit-transform: translateY(-30%);
+                transform: translateY(-30%);
     }
 }
 
@@ -1061,9 +1447,16 @@ nav #home-div .drop-down:hover {
 
 
 #main-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-bottom: 10px;
 }
 #main-footer h2 {
@@ -1075,9 +1468,15 @@ nav #home-div .drop-down:hover {
     letter-spacing: -2px;
 }
 .logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 70px;
 }
 .logo-container a>img {
@@ -1088,12 +1487,20 @@ nav #home-div .drop-down:hover {
     border-radius: 50%;
     border: 1px solid rgb(0, 0, 0);
     background-color: white;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .love-ruscon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 10px;
     color: #f5b01b;
 }
@@ -1107,6 +1514,8 @@ nav #home-div .drop-down:hover {
 }
 .logo-container img:hover {
     rotate: 360deg;
+    background-image: -o-linear-gradient(left top , rgb(247, 127, 29), rgb(7, 253, 19));
+    background-image: -webkit-gradient(linear , left top, right bottom , from(rgb(247, 127, 29)), to(rgb(7, 253, 19)));
     background-image: linear-gradient(to right bottom , rgb(247, 127, 29), rgb(7, 253, 19));
     scale: 1.3;
 }
@@ -1137,8 +1546,11 @@ nav #home-div .drop-down:hover {
     border: 2px solid #000000;
     border-radius: 20%;
     background-color: #e9bd5f;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    animation: blink 1s infinite;
+    -webkit-animation: blink 1s infinite;
+            animation: blink 1s infinite;
 }
 #backToTop:hover {
     scale: 1.3;
@@ -1188,9 +1600,14 @@ footer {
     }
 
     #my-notifications {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding: 10px 50px 30px 20px;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         line-height: 0.5;
     }
     #notification-heading-cross i {
@@ -1208,7 +1625,8 @@ footer {
     }
     #upper img {
         height: 7.5vh;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         margin-bottom: 5px;
     }
 
@@ -1218,10 +1636,19 @@ footer {
 
     #navbar #greet {
         color: aliceblue;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         font-size: 15px;
         gap: 1px;
     }
@@ -1285,9 +1712,15 @@ footer {
         font-weight: 200;
     }
     #personal-details #left #left-part2 #rank, #joining {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     #personal-details #left #left-part2 #rank #rank-btn {
         border-radius: 20px;
@@ -1440,28 +1873,54 @@ footer {
     footer {
         height: 5.5vh;
         width: 100%;
+        background-image: -o-linear-gradient(left, rgb(20, 20, 233), rgb(112, 90, 173));
+        background-image: -webkit-gradient(linear, left top, right top, from(rgb(20, 20, 233)), to(rgb(112, 90, 173)));
         background-image: linear-gradient(to right, rgb(20, 20, 233), rgb(112, 90, 173));
         position: fixed;
         bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 20px;
         z-index: 9;
     }
     footer a {
         text-decoration: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     footer .footer-element {
         margin: 10px 0px 10px 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         font-size: 3.5vh;
         font-weight: bold;
     }
@@ -1485,10 +1944,12 @@ footer {
     #box3 img {
         height: 15vw;
         width: 15vw;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         background-position: center;
         border-radius: 50%;
-        animation: blink 1.2s infinite;
+        -webkit-animation: blink 1.2s infinite;
+                animation: blink 1.2s infinite;
         cursor: pointer;
         margin-bottom: 2px;
     }
@@ -1523,7 +1984,19 @@ footer {
     }
     
     .side-user-anim {
-        animation: rotate 0.5s ease infinite;
+        -webkit-animation: rotate 0.5s ease infinite;
+                animation: rotate 0.5s ease infinite;
+    }
+    @-webkit-keyframes rotate {
+        0% {
+            rotate: 0deg;
+        }
+        50% {
+            rotate: 20deg;
+        }
+        100% {
+            rotate: 0deg;
+        }
     }
     @keyframes rotate {
         0% {
@@ -1538,10 +2011,19 @@ footer {
     }
     #profile-related {
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding: 15px 0px;
         padding-bottom: 20px;
         border: 1px solid rgba(211, 186, 186, 0.3);
@@ -1577,17 +2059,25 @@ footer {
         cursor: pointer;
     }
     #ruscon-id-details {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-top: 15px;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         font-size: 5vw;
         gap: 10px;
     }
     #ruscon-id-details img {
         width: 8vw;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
         border-radius: 50%;
     }
 
@@ -1606,9 +2096,15 @@ footer {
     .menu-item {
         margin: 10px 0;
         cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 5px;
         border-bottom: 1px solid rgba(211, 186, 186, 0.3);
     }
@@ -1619,12 +2115,14 @@ footer {
     }
     .menu-item h4 {
         font-size: 4.5vw;
-        font-weight: 100;
+        font-weight: 300;
     }
 
     .submenu {
         display: none;
         /* margin-left: 20px; */
+        background-image: -o-linear-gradient(right, rgb(98, 224, 98),rgb(224, 159, 61));
+        background-image: -webkit-gradient(linear, right top, left top, from(rgb(98, 224, 98)),to(rgb(224, 159, 61)));
         background-image: linear-gradient(to left, rgb(98, 224, 98),rgb(224, 159, 61));
         
         border: 1px solid rgba(211, 186, 186, 0.3);
@@ -1661,9 +2159,16 @@ footer {
 
 
     #side-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding: 20px;
     }
     #side-footer h2 {
@@ -1674,9 +2179,14 @@ footer {
         font-weight: 200;
     }
     .side-logo-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         padding-bottom: 10px;
         border-bottom: 1px solid rgba(211, 186, 186, 0.3);
     }
@@ -1697,9 +2207,15 @@ footer {
     #footer-sidebar {
         padding-bottom: 15px;
         width: calc(100% - 20px);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     #footer-sidebar img {
         width: 30vw;
