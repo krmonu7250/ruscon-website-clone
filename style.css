@@ -272,7 +272,7 @@ nav #home-div .drop-down:hover {
 .box {
     position: absolute;
     top: 9.5vh;
-    right: 1.5vw;
+    right: 3vw;
     height: 225px;
     width: 200px;
     border: 1px solid black;
